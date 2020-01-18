@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> RubberService </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+  <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar has-shadow is-spaced is-fixed-top" role="navigation" aria-label="main navigation" style="background:#f5f5f5">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <h1 class="subtitle has-text-grey-dark has-text-weight-medium "> <i class="fas fa-cog" style="color:#3273dc;padding-right: 5px "></i> Rubber<b>Service</b></h1>
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="show_menu()">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div  class="navbar-menu" id="menu_movil">
+      <div class="navbar-start">
+
+        <a class="navbar-item">
+          <i class="fas fa-user fa-1x" style="padding-right: 8px "></i>
+          Editar Perfil
+        </a>
+
+        <a onclick="SolicitudesCliente()" class="navbar-item">
+            <i class="fas fa-clipboard-check fa-1x" style="padding-right: 8px "></i>
+            Mis Solicitudes
+        </a>
+
+        <a href="index.html" class="navbar-item">
+            <i class="fas fa-power-off fa-1x" style="padding-right: 8px "></i>
+            Salir
+        </a>
+
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a onclick="NuevaSolicitud()" class="button is-link">
+                <i class="far fa-clipboard fa-1x" style="padding-right: 8px "></i> Nueva Solicitud
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+
+  <article class="panel is-link" style="margin:20px;margin-bottom: 95px;">
+    <p class="panel-heading">
+      <i class="fas fa-clipboard-check" style="padding-right: 5px"></i> Todas mis Solicitudes
+    </p>
+    <p class="panel-tabs">
+      <a id="pendientes" onclick="pendientes()" class="is-active"> Pendientes </a>
+      <a id="en_curso" onclick="en_curso()" > En curso </a>
+      <a id="terminadas" onclick="terminadas()">Terminadas</a>
+    </p>
+    <div id="solicitudes_pendientes">
+    </div>
+    <div id="solicitudes_en_curso" style = "display: none;">
+    </div>
+    <div id="solicitudes_terminadas" style = "display: none;">
+    </div>
+  </article>
+  <div style="position: fixed;bottom: 0;width: 100%;background-color:white;text-align: center;">
+    <div class="columns is-centered" style="margin-right: 20px; margin-left: 20px; margin-bottom: 8px; margin-top:8px;">
+      <div class="column has-text-centered">
+          <button id = "aceptar" onclick="NuevaSolicitud()" class="button is-dark " >
+            <i class="far fa-clipboard" style="padding-right: 8px;"></i>
+            Nueva Solicitud
+          </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/solicitudescliente.js"></script>
+
+</html>

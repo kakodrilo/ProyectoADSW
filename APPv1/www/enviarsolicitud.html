@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> RubberService </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+  <link rel="stylesheet" href="css/all.css">
+  
+
+  
+</head>
+
+<body>
+
+  <nav class="navbar has-shadow is-spaced is-fixed-top" role="navigation" aria-label="main navigation" style="background:#f5f5f5">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <h1 class="subtitle has-text-grey-dark has-text-weight-medium "> <i class="fas fa-cog" style="color:#3273dc;padding-right: 5px "></i> Rubber<b>Service</b></h1>
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="show_menu()">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div  class="navbar-menu" id="menu_movil">
+      <div class="navbar-start">
+
+        <a class="navbar-item">
+          <i class="fas fa-user fa-1x" style="padding-right: 8px "></i>
+          Editar Perfil
+        </a>
+
+        <a onclick="SolicitudesCliente()" class="navbar-item">
+            <i class="fas fa-clipboard-check fa-1x" style="padding-right: 8px "></i>
+            Mis Solicitudes
+        </a>
+
+        <a href="index.html" class="navbar-item">
+            <i class="fas fa-power-off fa-1x" style="padding-right: 8px "></i>
+            Salir
+        </a>
+
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a onclick="NuevaSolicitud()" class="button is-link">
+                <i class="far fa-clipboard fa-1x" style="padding-right: 8px "></i> Nueva Solicitud
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+    <section class="hero is-medium request" style="margin:20px">
+        <p class="subtitle"> <i class="far fa-clipboard fa-1x" style="padding-right: 8px"></i> <b>Ingresar Solicitud</b></p>      
+        <p>
+            Para enviar una solicitud de servicio técnico debes rellenar el siguiente formulario.
+        </p>
+        <br>
+            <div class="field">
+                    <label class="label">Asunto</label>
+                    <p>
+                        Escribe el asunto general de tu problema. 
+                    </p>
+                    <div class="control" style="padding-top: 10px ">
+                      <input class="input" type="text" placeholder="Asunto" id="asunto" maxlength="50">
+                    </div>
+                  </div>
+                
+                  <div class="field">
+                    <label class="label">Categoría</label>
+                    <p>
+                      Seleccione la categoría de su problema. Si no conoce la categoría o no está dentro de las siguientes, seleccione <i>Otros</i>.
+                  </p>
+                    <div class="control" style="padding-top: 10px ">
+                      <div class="select">
+                        <select id="categoria">
+                          <option>Seleccionar categoría</option>
+                          <option>Electrodomésticos</option>
+                          <option>Televisor</option>
+                          <option>Celular</option>
+                          <option>Computador</option>
+                          <option>Notebook</option>
+                          <option>Tablet</option>
+                          <option>Parlantes</option>
+                          <option>Otros</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <label class="label">Descripción</label>
+                    <p>
+                        Escribe la descripción general de tu problema. Sé conciso y específico. 
+                    </p>
+                    <div class="control" style="padding-top: 10px ">
+                      <textarea class="textarea" placeholder="Descripción del problema" id="descripcion" maxlength="500"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Archivos</label>
+                    <p>
+                      Sube alguna imagen o video que ayude a identificar el problema.
+                    </p>
+                    <div id="file-js-example" class="file has-name"  style="padding-top: 10px ">
+                        <label class="file-label">
+                          <input  class="file-input" onchange = "getBaseUrl()" type="file" name="resume">
+                          <span class="file-cta">
+                            <span class="file-icon">
+                              <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                              Elegir archivo...
+                            </span>
+                          </span>
+                          <span class="file-name" id="archivo">
+                            Sin archivo
+                          </span>
+                        </label>
+                      </div>
+                  </div>
+
+                  <div class="columns is-centered" style="padding-top:20px">
+                    <div class="column has-text-centered is-2">
+                      <button class="button is-link is-centered" style="width: 9em;" onclick="submit_by_id()">Enviar</button>
+                    </div>
+                  </div>
+    </section>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/enviarsolicitud.js"></script>
+
+
+</html>

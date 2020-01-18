@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> RubberService </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+  <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+<body>
+
+  <nav id="menu" class="navbar has-shadow is-spaced is-fixed-top" role="navigation" aria-label="main navigation" style="background:#f5f5f5">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+          <h1 class="subtitle has-text-grey-dark has-text-weight-medium "> <i class="fas fa-cog" style="color:#3273dc;padding-right: 5px "></i> Rubber<b>Service</b></h1>
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="show_menu()">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div  class="navbar-menu" id="menu_movil">
+        <div class="navbar-start">
+          <a href = "." class="navbar-item">
+            <i class="fas fa-home fa-1x" style="padding-right: 8px "></i>
+            Home
+          </a>
+    
+          <a class="navbar-item">
+            <i class="fas fa-user fa-1x" style="padding-right: 8px "></i>
+            Editar Perfil
+          </a>
+
+          <a href="versolicitudes.html?id=2" class="navbar-item">
+              <i class="fas fa-clipboard-check fa-1x" style="padding-right: 8px "></i>
+              Solicitudes Aceptadas
+          </a>
+
+          <a href="calificacion.html?tecnico=3" class="navbar-item">
+              <i class="fas fa-user-check fa-1x" style="padding-right: 8px "></i>
+              Calificar Servicio
+          </a>
+
+          <a href="index.html" class="navbar-item">
+              <i class="fas fa-power-off fa-1x" style="padding-right: 8px "></i>
+              Salir
+          </a>
+  
+        </div>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="solicitud.html?id=9&tecnico=2" class="button is-link">
+                  <i class="far fa-clipboard fa-1x" style="padding-right: 8px "></i> Ver Solicitudes Pendientes
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="enviarsolicitud.html?id=2" class="button is-link">
+                  <i class="far fa-clipboard fa-1x" style="padding-right: 8px "></i> Enviar Solicitud
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div style="margin: 20px;">
+        <p style="margin-bottom: 0 ;" class="subtitle"> <i class="fas fa-comment fa-1x" style="padding-right: 8px"></i><b id = nombre ></b></p>      
+        <a  id = "finalizar" style="margin-left: 30px;">
+          Finalizar Servicio
+        </a>
+    </div>
+    
+    <div id="chat" class="chat" style="margin: 20px;margin-bottom: 80px; ">
+        
+        
+    </div>
+    <div style="position: fixed;bottom: 0;width: 100%;background-color:white;text-align: center;">
+        <div class="field is-grouped" style="margin: 20px;">
+            <p class="control is-expanded">
+            <input id="texto" class="input" type="text" placeholder="Escribe un mensaje...">
+            </p>
+            <p class="control">
+            <button onclick="enviar()" class="button is-dark ">
+                <i class="far fa-paper-plane"></i>
+            </button>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/chat.js"></script>
+
+</html>
+

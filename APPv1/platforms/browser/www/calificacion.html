@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> RubberService </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+  <link rel="stylesheet" href="css/all.css">
+  
+
+  
+</head>
+
+<body>
+
+  <nav class="navbar has-shadow is-spaced is-fixed-top" role="navigation" aria-label="main navigation" style="background:#f5f5f5">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <h1 class="subtitle has-text-grey-dark has-text-weight-medium "> <i class="fas fa-cog" style="color:#3273dc;padding-right: 5px "></i> Rubber<b>Service</b></h1>
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="show_menu()">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div  class="navbar-menu" id="menu_movil">
+      <div class="navbar-start">
+
+        <a class="navbar-item">
+          <i class="fas fa-user fa-1x" style="padding-right: 8px "></i>
+          Editar Perfil
+        </a>
+
+        <a onclick="SolicitudesCliente()" class="navbar-item">
+            <i class="fas fa-clipboard-check fa-1x" style="padding-right: 8px "></i>
+            Mis Solicitudes
+        </a>
+
+        <a href="index.html" class="navbar-item">
+            <i class="fas fa-power-off fa-1x" style="padding-right: 8px "></i>
+            Salir
+        </a>
+
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a onclick="NuevaSolicitud()" class="button is-link">
+                <i class="far fa-clipboard fa-1x" style="padding-right: 8px "></i> Nueva Solicitud
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+
+    <div class="box" style="margin: 20px;">
+      <p class="subtitle"> <i class="fas fa-user-check fa-1x" style="padding-right: 8px"></i> <b>Califica el Servicio</b></p> 
+      <hr>
+         Tú opinión nos interesa. 
+          
+         Es por eso que nos gustaría que calificaras la atención recibida por el técnico 
+         <a id="nombre_tecnico">Nombre técnico </a> .
+         Puedes dejar un comentario adicional si lo deseas. 
+
+
+      <div class="field" style="margin-top: 8px;">
+        <label class="label">¿Cómo calificarías la atención recibida?</label>
+        <div class="estrellas has-text-centered" style="margin: 8px;">
+          <button onclick="carita1()" class="button is-white is-rounded">
+            <span class="icon is-small">
+              <i id="carita1" class="far fa-angry fa-2x" style="color: rgb(74, 74, 74);"></i>
+            </span>
+          </button>
+          <button onclick="carita2()" class="button is-white is-rounded">
+            <span class="icon is-small">
+              <i id="carita2" class="far fa-frown fa-2x" style="color: rgb(74, 74, 74);"></i>
+            </span>
+          </button>
+          <button onclick="carita3()" class="button is-white is-rounded">
+            <span class="icon is-small">
+              <i id="carita3" class="far fa-meh fa-2x" style="color: rgb(74, 74, 74);"></i>
+            </span>
+          </button>
+          <button onclick="carita4()" class="button is-white is-rounded">
+            <span class="icon is-small">
+              <i id="carita4" class="far fa-smile fa-2x" style="color: rgb(74, 74, 74);"></i>
+            </span>
+          </button>
+          <button onclick="carita5()" class="button is-white is-rounded">
+            <span class="icon is-small">
+              <i id="carita5" class="far fa-grin-beam fa-2x" style="color: rgb(74, 74, 74);"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Comentario (opcional)</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea"></textarea>
+        </div>
+      </div>
+
+      <div class="columns is-centered" style="margin: 8px;">
+        <div class="column has-text-centered">
+              <button onclick="enviar()" class="button is-link">Enviar</button>
+              <button onclick="omitir()" class="button is-link is-light">Omitir</button>
+        </div>
+      </div>
+      
+      
+    </div>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/calificacion.js"></script>
+
+
+</html>

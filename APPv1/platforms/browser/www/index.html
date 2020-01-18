@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> RubberService </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+ 
+  <div style="margin: 10%;">
+    <p class="title">
+      <i class="fas fa-cog" style="color:#3273dc;padding-right: 3px "></i> Rubber<b>Service</b>
+    </p>
+    <div class="columns is-centered">
+      <div class="column is-5-tablet is-4-desktop is-3-widescreen ">
+        <div class="box" style="background-color: whitesmoke ;">
+          <p class="is-size-5">
+            ¡Bienvenido!
+            
+            Seleccione el tipo de acceso:
+          </p>
+          <hr style="border-color: #3273dc; background-color:#3273dc;">
+          <button onclick="cliente()" class="button is-link is-medium " style="width: 80%;margin-left:10%;margin-right: 10%;">
+            <i class="fas fa-user" style="padding-right: 10%;"></i>
+            Cliente
+          </button>
+          <button onclick = "tecnico()" class="button is-link is-medium" style="width: 80%; margin: 10%;">
+            <i class="fas fa-user-astronaut" style="padding-right: 10%;"></i>
+            Técnico
+          </button>
+        </div>
+      </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+
+
+</html>
